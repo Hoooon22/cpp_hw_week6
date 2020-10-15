@@ -9,7 +9,7 @@ using namespace std;
 class Cal
 {
 private:
-	string getnum; // 숫자 입력
+	string stringNum; // 숫자 입력
 	string operate_c; // 연산자 입력
 	int op[4];
 	int* num; // 입력한 숫자 배열
@@ -20,7 +20,7 @@ private:
 public:
 	Cal(string getnum)
 	{
-		this->getnum = getnum;
+		this->stringNum = getnum;
 	}
 
 	void set();
@@ -31,7 +31,7 @@ public:
 
 	// 이번에 추가한 메소드
 	int getSize(); // size 가져오기
-	void setStringNum(int* tmp); // tmp으로 바꾼다.
+	void setStringNum(string tmp); // tmp으로 바꾼다.
 	int* getNum(); // num 가져오기
 	void changeNum(); // num 바꾸기
 
@@ -47,7 +47,7 @@ void Cal::set()
 void Cal::setNum()
 {
 	char *str_buff = new char[1000];
-	strcpy(str_buff, this->getnum.c_str());
+	strcpy(str_buff, this->stringNum.c_str());
 	this->size = 1;
 
 	for (int i = 0; str_buff[i] != NULL; i++) // size 계산
@@ -151,9 +151,9 @@ int Cal::getSize()
 {
 	return this->size;
 }
-void Cal::setStringNum(int* tmp)
+void Cal::setStringNum(string tmp)
 {
-	////////////////////////
+	this->stringNum = tmp;
 }
 int* Cal::getNum()
 {
@@ -161,7 +161,7 @@ int* Cal::getNum()
 }
 void Cal::changeNum()
 {
-
+	/////////////////
 }
 
 void change(Cal A, Cal B)

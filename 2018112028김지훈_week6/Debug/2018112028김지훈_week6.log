@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\cpp_hw\cpp_hw_week6\2018112028김지훈_week6\main.cpp(76,8): warning C4101: 'str_arr' :참조되지 않은 지역 변수입니다.
+  2018112028김지훈_week6.vcxproj -> D:\cpp_hw\cpp_hw_week6\Debug\Project1.exe
